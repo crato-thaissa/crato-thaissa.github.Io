@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8"> 
+        <style>
+            .h2 {
+                background-color:rgb(0, 255, 234); 
+                color:black;
+            }
+            .h4 {
+                background-color: rgb(0, 255, 234);
+                color: black;
+            }
+            .rodape {
+            outline: 1px solid rgb(0, 0, 0)50, 246, 246);
+            outline-offset: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em; 
+        }
+        </style>
+          
+    </head>
+      
+    <body>
+        <img style="float:right;" src="https://i.pinimg.com/originals/f9/53/2c/f9532c7203c3b592deed78b4504f92eb.jpg">
+        <h4> Bem vindo </h4>
+        <h2> Questiońario para adoção </h2>
+        <form>
+            <fieldset id="adotante">
+                <legend> Identificação/Ficha do Adotante </legend>
+                <p> Nome completo: <input  id="nome completo" name="nome" type="text" ></p>
+                <p> Data de seu nascimento: <input  id="data de nascimento" name="nascimento"  type="date" ></p>
+                <p> Nome da cidade onde reside: <input  id="local" name="local"  type="local" ></p>
+                <p> Email: <input id="email" name="email" type="text" ></p>
+                <p> Número para contato <input id="numero" name="numero" type="number" ></p>
+                <p>Foto do Adotante : <input id="foto" name="foto" type="file" accept="image/png, image/jpg"></p>
+                <select id="moradia" name="moradia"> 
+                        <option value="residencia"> Residencia </option>
+                        <option value="apartamento"> Apartamento </option>
+                        <option value="seleciona" selected> Selecionar </option>
+                </select>
+            </fieldset>
+
+
+            <fieldset id="animal">
+                <legend> Informação do Animal </legend>
+                <p> Raça: 
+                    <select id="raca" name="raca">
+                            <option value="pug"> Pug </option>
+                            <option value="poodle"> Poodle </option>
+                            <option value="maltes"> Maltês </option>
+                            <option value="shihtzu"> Shih Tzu</option>
+                            <option value="seleciona" selected> Selecionar raça </option>
+                    </select>
+                </p>
+
+                <p> Sexo: 
+                    <select id="sexo" name="sexo">
+                        <option value="feminino"> Feminino </option>
+                        <option value="masculino"> Masculino </option>
+                        <option value="seleciona" selected> Selecionar </option>
+                    </select>
+                </p>
+                
+                <p> O animal tem algum tipo de deficiência?
+                    <select id="deficiencia" name="deficiencia">
+                            <option value="sim"> Possui </option>
+                            <option value="nao"> Não possui </option>
+                            <option value="seleciona" selected> Selecionar </option> 
+                    </select>
+                    <p> Se sim, qual? <input  id="def" name="def" type="text" ></p>
+                </p>
+            </fieldset>
+            
+
+            <fieldset id="idade">
+                <legend> Idade do animal: </legend>
+                 <label>
+                     <input type="radio" name="idade" value="x"> 0 - 1 </label>
+                 <br>
+                 <label>
+                     <input type="radio" name="idade" value="x"> 1 - 2 </label>
+                 <br>
+                 <label>
+                     <input type="radio" name="idade" value="x"> 2 - 3 </label> 
+                 <br>   
+                 <label>
+                     <input type="radio" name="idade" value="x"> 3 - 4</label>
+                 <br>
+                 <label>
+                     <input type="radio" name="idade" value="x"> 5 - 6</label>
+                 <br>
+                 <label>
+                     <input type="radio" name="idade" value="x"> 6 ou mais </label>
+                 <br>
+            </fieldset>
+        </form>
+        <div class="rodape">
+                <p>&copy; 2019 crato-thaissa.github.io </p>
+        </div>
+    </body>
+</html>
