@@ -41,10 +41,9 @@ function Q3() {
 
 
 function Q4() {
-    console.log('Q4');
     var a_str = document.getElementById('a').value;
-    var b_str = document.getElementById('d').value;
-    var c_str = document.getElementById('e').value;
+    var b_str = document.getElementById('b').value;
+    var c_str = document.getElementById('c').value;
     // Segue aqui seu código
     if ((!a_str) && (!b_str ) && (!c_str)){
         console.log('insira ao menos dois valores ')
