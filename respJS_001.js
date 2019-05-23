@@ -3,7 +3,7 @@ function Q1() {
     var x = Number.parseInt(document.getElementById('x').value);
     var y = Number.parseInt(document.getElementById('y').value);
     // Segue aqui seu código
-    console.log('X / Y: ' + x + ' / ' + y);
+    console.log('X / Y: ' + x + ' / ' + y)
     console.log('Quociente = ' + Math.floor(x/y));
     console.log('Resto = ' + (x%y));
 }
@@ -25,17 +25,17 @@ function Q3() {
     var profissao = aux.options[aux.selectedIndex].text;
     // Segue aqui seu código
     if (profissao .endsWith('Musicista')) {
-        console.log(profissao + ' ' + 'substantivo de ambos gêneros');
+        console.log(profissao + ' ' + 'substantivo de ambos gêneros')
     } else if (profissao .endsWith('a')) {
-        console.log (profissao + ' ' + 'substantivo feminino');
+        console.log (profissao + ' ' + 'substantivo feminino')
     } else if (profissao .endsWith('o')) {
-        console.log (profissao + ' ' + 'substantivo masculino');
+        console.log (profissao + ' ' + 'substantivo masculino')
     } else if (profissao .endsWith('r')) {
-        console.log (profissao + ' ' + 'substantivo masculino');
+        console.log (profissao + ' ' + 'substantivo masculino')
     } else if (profissao .endsWith('z')) {
-        console.log(profissao + ' ' + 'substantivo femininoo');
+        console.log(profissao + ' ' + 'substantivo femininoo')
     } else if (profissao .endsWith('e')) {
-        console.log('substantivo de ambos gêneros');
+        console.log('substantivo de ambos gêneros')
     }        
 }
 
@@ -46,7 +46,7 @@ function Q4() {
     var b_str = document.getElementById('b').value;
     var c_str = document.getElementById('c').value;
     // Segue aqui seu código
-    if((!a_str) && (!b_str)) && (!bc_str) {
+    if((!a_str) && (!b_str) && (!c_str)) {
         console.log('Escreva dois valores')
     }
     else { 
@@ -89,8 +89,8 @@ function Q4() {
         var genero = aux.options[aux.selectedIndex].text;
         // Segue aqui seu código (imc = peso/(altura+altura))
         // (imc = peso / (altura+altura))
-        var imc = (peso/Math.pow(altura + altura))
-        console.log('Valor IMC = ' + (peso/Math.pow(altura + altura)))
+        var imc = (peso/Math.pow(altura,2))
+        console.log('Valor IMC = ' + (peso/Math.pow(altura,2)))
         if (imc > 18.5) {
             console.log('Magro(a)');
         }
