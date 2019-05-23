@@ -70,7 +70,7 @@ function Q4() {
     else {
         if (!c_str) {
         console.log ('cateto adjacente = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(b_str,2)));
-        }}}}}}}}
+        }}}}}}}
 
 
     function Q5() {
