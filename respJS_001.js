@@ -46,31 +46,28 @@ function Q4() {
     var b_str = document.getElementById('d').value;
     var c_str = document.getElementById('e').value;
     // Segue aqui seu código
-    if((!a_str) && (!b_str) && (!c_str)) {
-        console.log('Escreva dois valores')
-    } else {
+    if ((!a_str) && (!b_str ) && (!c_str)){
+        console.log('insira ao menos dois valores ')
+    }else{ 
         if ((!a_str) && (!b_str)) {
-        console.log('Escreva dois valores')
-        } else {
-            if ((!b_str) && (!c_str)) {
-        console.log('Escreva dois valores')
-        }
-    else {
+    console.log('insira ao menos dois valores')
+    }else {
+        if ((!b_str) && (!c_str)) {
+        console.log('insira ao menos dois valores')
+    }else {
         if ((!a_str) && (!c_str)) {
-        console.log('Escreva dois valores')
-        }
-    else {
-         if (!a_str) {
+        console.log('insira ao menos dois valores')
+
+    }else {
+        if (!a_str) {
         console.log ('Hipotenusa = ' +  Math.sqrt(Math.pow(b_str,2) + Math.pow(c_str,2)));
-        }
-    else {
+    }else {
         if (!b_str) {
-        console.log ('cateto oposto = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(c_str,2)));
-        }
-    else {
+        console.log ('cateto b = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(c_str,2)));
+    } else {
         if (!c_str) {
-        console.log ('cateto adjacente = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(b_str,2)));
-        }}}}}}}
+        console.log ('cateto c = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(b_str,2)));
+}}}}}}}}
 
 
     function Q5() {
