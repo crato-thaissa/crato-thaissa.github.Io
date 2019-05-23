@@ -46,24 +46,29 @@ function Q4() {
     var c_str = document.getElementById('c').value;
     // Segue aqui seu código
     if ((!a_str) && (!b_str ) && (!c_str)){
-        console.log('insira ao menos dois valores ')
-    }else{ 
+        console.log('digite dois valores ')
+    }
+    else { 
         if ((!a_str) && (!b_str)) {
-    console.log('insira ao menos dois valores')
-    }else {
+        console.log('digite dois valores')
+    }
+    else {
         if ((!b_str) && (!c_str)) {
-        console.log('insira ao menos dois valores')
-    }else {
+        console.log('digite dois valores')
+    }
+    else {
         if ((!a_str) && (!c_str)) {
-        console.log('insira ao menos dois valores')
-
-    }else {
+        console.log('digite dois valores')
+    }
+    else {
         if (!a_str) {
         console.log ('Hipotenusa = ' +  Math.sqrt(Math.pow(b_str,2) + Math.pow(c_str,2)));
-    }else {
+    }
+    else {
         if (!b_str) {
         console.log ('cateto b = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(c_str,2)));
-    } else {
+    }
+    else {
         if (!c_str) {
         console.log ('cateto c = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(b_str,2)));
     }}}}}}}}
