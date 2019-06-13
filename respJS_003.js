@@ -1,4 +1,5 @@
-    var pares = [];
+console.log("Respostas JS_003");
+var pares = [];
     function isPar(numero) {
         if(numero%2 == 0) {
             return true;
