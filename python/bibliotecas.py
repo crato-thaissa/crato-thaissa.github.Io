@@ -19,4 +19,4 @@ for i in range(10):
 
 print (sha256(b'Thaissa Crato').hexdigest())
 
-print (boba.divisãoInteira (15,6))
+print (boba.divisãoInteira (15,6)) 
