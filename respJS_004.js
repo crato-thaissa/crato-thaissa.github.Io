@@ -1,18 +1,19 @@
-const getRemainTime = deadline  {
+const getRemainTime = deadline => {
     let now = new Date(),
-    remainTime = (new Date (deadline) - now + 1000) / 1000;
-    remainSeconds = ('0' + Math.floor (remainTime % 60)).slice(-2);
-    remainMinutes = ('0' + Math.floor (remainTime / % 60 % 60)).slice(-2);
-    remainHours = ('0' + Math.floor (remainTime / 3600 % 24)).slice(-2);
+    remainTime = (new Date (deadline) - now + 1000) / 1000,
+    remainSeconds = ('0' + Math.floor (remainTime % 60)).slice(-2),
+    remainMinutes = ('0' + Math.floor (remainTime / % 60 % 60)).slice(-2),
+    remainHours = ('0' + Math.floor (remainTime / 3600 % 24)).slice(-2),
     remainDays = Math.floor (remainTime / (3600 * 24));
     
     return {
-        remainTime;
-        remainSeconds;
-        remainMinutes;
-        remainHours;
+        remainTime,
+        remainSeconds,
+        remainMinutes,
+        remainHours,
         remainDays;
     }
-};
+}
 
-console.log(getRemainTime(''));
+console.log(getRemainTime('2019-07-13T16:43:59.442Z'))
+
