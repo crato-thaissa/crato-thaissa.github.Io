@@ -1,4 +1,4 @@
-const getRemainTime = deadline => {
+const getRemainTime = deadline  {
     let now = new Date(),
     remainTime = (new Date (deadline) - now + 1000) / 1000;
     remainSeconds = ('0' + Math.floor (remainTime % 60)).slice(-2);
