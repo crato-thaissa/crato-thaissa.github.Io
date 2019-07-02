@@ -41,37 +41,63 @@ function Q3() {
 
 
 function Q4() {
-    var a_str = document.getElementById('a').value;
-    var b_str = document.getElementById('b').value;
-    var c_str = document.getElementById('c').value;
-    // Segue aqui seu código
-    if ((!a_str) && (!b_str ) && (!c_str)){
-        console.log('digite dois valores ')
-    }
-    else { 
-        if ((!a_str) && (!b_str)) {
-        console.log('digite dois valores')
-    }
+    console.log('Q4');
+    var a_str = document.getElementById('cat1').value;
+    var b_str = document.getElementById('cat2').value;
+    var c_str = document.getElementById('hip').value;   
+
+    if (a_str && b_str && c_str) {
+        console.log('Retire um valor!!') 
+    } 
+
     else {
-        if ((!b_str) && (!c_str)) {
-        console.log('digite dois valores')
+    if ((!a_str) && (!b_str) && (!c_str)) {
+        console.log('Informe ao menos dois valores!!') 
     }
+
     else {
-        if ((!a_str) && (!c_str)) {
-        console.log('digite dois valores')
+    if ((!a_str) && (!b_str)) {
+        console.log('Informe mais um valor!!')
+    } 
+    
+    else {
+    if ((!a_str) && (!c_str)) {
+        console.log('Informe mais um valor!!')
+    } 
+
+    else {
+    if ((!b_str) && (!c_str)) {
+        console.log('Informe mais um valor!!')
+    } 
+
+    else {
+    if (!a_str) {
+        console.log('Lado Faltando: Cateto 1')
+        console.log('O valor do Cateto 1 é: ' + Math.sqrt(Math.pow (c_str,2) - Math.pow (b_str,2)))
+    } 
+    
+    else {    
+    if (!b_str) {
+        console.log('Lado Faltando: Cateto 2')
+        console.log('O valor do Cateto 2 é: ' + Math.sqrt(Math.pow (c_str,2) - Math.pow (a_str,2)))
+    } 
+    
+    else {
+    if (!c_str) {
+        console.log('Lado Faltando: Hipotenusa')
+        console.log('O valor da Hipotenusa é: ' + Math.sqrt(Math.pow (a_str,2) + Math.pow (b_str,2)))
+    }  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
     }
-    else {
-        if (!a_str) {
-        console.log ('Hipotenusa = ' +  Math.sqrt(Math.pow(b_str,2) + Math.pow(c_str,2)));
-    }
-    else {
-        if (!b_str) {
-        console.log ('cateto oposto = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(c_str,2)));
-    }
-    else {
-        if (!c_str) {
-        console.log ('cateto adjacente = ' +  Math.sqrt(Math.pow(a_str,2) - Math.pow(b_str,2)));
-    }}}}}}}}
+}
+
+function Q5(){
+
 
 
 function Q5() {
