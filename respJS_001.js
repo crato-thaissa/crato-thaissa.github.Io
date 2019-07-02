@@ -96,10 +96,6 @@ function Q4() {
     }
 }
 
-function Q5(){
-
-
-
 function Q5() {
     console.log('Q5');
     var altura = Number.parseFloat(document.getElementById('altura').value);
