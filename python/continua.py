@@ -24,10 +24,11 @@ print (dic['dois'])
 msg = 'Custa dois reais'
 novamsg = []
 for palavra in msg.split():
-    if palavra in dic.keys():
-        novamsg.append (str(dic[palavra]))
-    else:
-        novamsg.append(palavra)
+    novamsg.append(str(dic.get(palavra, palavra)))
+    # if palavra in dic.keys():
+    #    novamsg.append (str(dic[palavra]))
+    # else:
+    #    novamsg.append(palavra)
 novamsg = ' '.join (novamsg)
 print (novamsg)
 
@@ -40,10 +41,11 @@ dic = {
 msg = "I'm eating a green apple"
 tradução = []
 for palavra in msg.split():
-    if palavra in dic.keys():
-        tradução.append (dic[palavra])
-    else:
-        tradução.append (palavra)
+    tradução.append(dic.get(palavra, palavra))
+    # if palavra in dic.keys():
+    #    tradução.append (dic[palavra])
+    # else:
+    #    tradução.append (palavra)
 print (' '.join (tradução))
 print (dic.values())
 print (dic.items())
@@ -51,10 +53,8 @@ print (dic.items())
 # Funções
 def imprime(x):
     """
-
     x: qualquer coisa para print;
     retorna nada
-
     """
     print(x)
 
@@ -69,7 +69,7 @@ imprime ([True, False])
 def distancia(a, b):
     """
     a, b: são listas, tuplas, etc com no mínimo dois elementos
-
+    retorna distância Euclidiana ente "pontos 2D" a e b
     """
     return ((a[0] - b[0])**2 + (a[1] - b[1])**2)**0.5
 
