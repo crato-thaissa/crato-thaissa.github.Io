@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8">
-    <style>
-    .rodape {
-            outline: 1px solid rgb(0, 0, 0)50, 246, 246);
-            outline-offset: 5px;
-            width: 100%;
-            text-align: center;
-            font-size: 0.9em; /* 1em é o tamanho normal da fonte */
-        }
-    </style>
-    </head>
-    <body>
-        <h1> Volte mais Tarde ... ;) </h1>
-        <div class="rodape">
-                <p>&copy; 2019 crato-thaissa.github.io </p>
-        </div>
-    </body>
-</html>
+const getRemainTime = deadline => {
+    let now = new Date(),
+    remainTime = (new Date (deadline) - now + 1000) / 1000;
+    remainSeconds = ('0' + Math.floor (remainTime % 60)).slice(-2);
+    remainMinutes = ('0' + Math.floor (remainTime / % 60 % 60)).slice(-2);
+    remainHours = ('0' + Math.floor (remainTime / 3600 % 24)).slice(-2);
+    remainDays = Math.floor (remainTime / (3600 * 24));
+    
+    return {
+        remainTime;
+        remainSeconds;
+        remainMinutes;
+        remainHours;
+        remainDays;
+    }
+};
+
+console.log(getRemainTime(''));
