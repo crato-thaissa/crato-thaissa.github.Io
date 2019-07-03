@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Onda</title>
-	</head>
-	<body>
-	<canvas style="background:#000000;" id="canvas" width="595" height="505"></canvas>	
-	<script>
-		/*
-		I see this question is a bit old, but I decided to give an answer anyway for those who find this question by searching.
-The standard way to represent 2D/3D transformations nowadays is by using homogeneous coordinates. [x,y,w] for 2D, and [x,y,z,w] for 3D. Since you have three axes in 3D as well as translation, that information fits perfectly in a 4x4 transformation matrix. I will use column-major matrix notation in this explanation. All matrices are 4x4 unless noted otherwise.
-The stages from 3D points and to a rasterized point, line or polygon looks like this:
-
-Transform your 3D points with the inverse camera matrix, followed with whatever transformations they need. If you have surface normals, transform them as well but with w set to zero, as you don't want to translate normals. The matrix you transform normals with must be isotropic; scaling and shearing makes the normals malformed.
-Transform the point with a clip space matrix. This matrix scales x and y with the field-of-view and aspect ratio, scales z by the near and far clipping planes, and plugs the 'old' z into w. After the transformation, you should divide x, y and z by w. This is called the perspective divide.
-Now your vertices are in clip space, and you want to perform clipping so you don't render any pixels outside the viewport bounds. Sutherland-Hodgeman clipping is the most widespread clipping algorithm in use.
-Transform x and y with respect to w and the half-width and half-height. Your x and y coordinates are now in viewport coordinates. w is discarded, but 1/w and z is usually saved because 1/w is required to do perspective-correct interpolation across the polygon surface, and z is stored in the z-buffer and used for depth testing.
-This stage is the actual projection, because z isn't used as a component in the position any more.
-
-The algorithms:
-Calculation of field-of-view
-This calculates the field-of view. Whether tan takes radians or degrees is irrelevant, but angle must match. Notice that the result reaches infinity as angle nears 180 degrees. This is a singularity, as it is impossible to have a focal point that wide. If you want numerical stability, keep angle less or equal to 179 degrees.
-
-fov = 1.0 / tan(angle/2.0)
-Also notice that 1.0 / tan(45) = 1. Someone else here suggested to just divide by z. The result here is clear. You would get a 90 degree FOV and an aspect ratio of 1:1. Using homogeneous coordinates like this has several other advantages as well; we can for example perform clipping against the near and far planes without treating it as a special case.
-
-Calculation of the clip matrix
-This is the layout of the clip matrix. aspectRatio is Width/Height. So the FOV for the x component is scaled based on FOV for y. Far and near are coefficients which are the distances for the near and far clipping planes.
-
-[fov * aspectRatio][		0		][		0			  ][		0	   ]
-[		0		][	   fov	   ][		0			  ][		0	   ]
-[		0		][		0		][(far+near)/(far-near)  ][		1	   ]
-[		0		][		0		][(2*near*far)/(near-far)][		0	   ]
-Screen Projection
-After clipping, this is the final transformation to get our screen coordinates.
-
-new_x = (x * Width ) / (2.0 * w) + halfWidth;
-new_y = (y * Height) / (2.0 * w) + halfHeight;
--Mads Elvheim
-
-Thanks to Mads Elvheim for making this program possible
-*/
-var canvas=document.getElementById("canvas");
+    <script>
+        var canvas=document.getElementById("canvas");
 var ctx=canvas.getContext("2d");
 var near=0.1;
 var far=10;
@@ -79,7 +38,7 @@ if(x!=-100 && z!=400){
 	
 }
    ctx.fillStyle="#ffffff";
-   ctx.fillText("Made By RedBlazerFlame. Dont forget to like!",0,10);
+   ctx.fillText("",0,10);
 }
 function clear(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -163,6 +122,6 @@ function point(x,y,z,r,vx,vy,vz){
 		ctx.fill()
 	}
 }
-	</script>
-	</body>
+    </script>
+    </body>
 </html>
