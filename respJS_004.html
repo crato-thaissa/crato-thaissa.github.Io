@@ -15,8 +15,8 @@
     header {
         position:fixed;
         width: 100%;
-        /* background- */
         top:0;
+        left:0;
         text-align: center;
     }
     header a {
@@ -27,17 +27,65 @@
         margin: 150px 30px;
         border: 1px solid afff;
         border-radius: 10px;
-
     }
     header a:hover{
-        background-color:afff;
-        color:burlywood;
+        background-color:#fff;
+        color:black;
     }
 
-    .btn-1{
-        transition: .5s;
-        box-shadow: 0 3px 
+
+    @keyframes btn1{
+        0% {
+            transform:rotate(0);
+        }
+        25% {
+            transform:rotate(360deg);
+        }
+        50% {
+            transform:rotate(0);
+        }
+        75% {
+            transform:rotate(-360deg);
+        }
+        100% {
+            transform:rotate(0);   
+        }
     }
+    .btn-1{ 
+        transition: 50s;
+    }
+    .btn-1:hover {
+        animation-name: btn1;
+        animation-delay: .9s;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: 3
+    }
+    
+    
+    @keyframes btn2{
+        0% {
+            transform:rotate(0);
+        }
+        50% {
+            transform:rotate(180deg);
+        }
+        100% {
+            transform:rotate(0);   
+        }
+    }
+    .btn-2{ 
+        transition: 50s;
+    }
+    .btn-2:hover {
+        animation-name: btn2;
+        animation-delay: .5s;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 10
+    }
+    
+    
     .rodape {
             outline: 1px solid rgb(0, 0, 0)50, 246, 246);
             outline-offset: 5px;
@@ -47,25 +95,29 @@
         }
     </style>
     
-    </head>
 
     
     <body>
         <header>
             <ul>
                 <li>
-                    <a href="a" class="btn-1"></a>
-                    <a href="a" class="btn-1"></a>
-                    <a href="a" class="btn-1"></a>
+                    <a href="a" class="btn-1"> Botão 01 </a>
+                    <a href="a" class="btn-2"> Botão 02 </a>
                 </li>
             </ul>        
         </header>
-        <h1> Volte mais Tarde ... ;) </h1>
+       
         <div id="clock"></div>
         
-    </body>
+    <canvas style="background:#000000;" id="canvas" width="595" height="505"></canvas>
+    <br>
+    <p>
+        <h1> Encontre os botões se puder </h1>
+    
     <div class="rodape">
             <p>&copy; 2019 crato-thaissa.github.io </p>
             <p>&copy; 2019 hacknsa.github.io </p>
         </div>
+    
+    </body>
 </html>
