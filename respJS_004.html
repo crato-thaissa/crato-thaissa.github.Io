@@ -9,41 +9,18 @@
     <body>
         <div>
         <style>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <script src="respJS_004.js"></script>
+        <title> Trabalho Final </title>
+    </head>
     
-            .container {
-            background: #fff;
-            width:.5%;
-            margin-left: auto;
-            margin-right:auto;
-            padding:1rem;
-            border-radius: 3px;
-        }
-        .btn {
-            background: #ffffff;
-            border: none;
-            color: #ffffff;
-            padding:10px 30px;
-            border-radius: 10px;
-        }
-        .flash {
-            animation-name: flash;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-        }
-        @keyframes flash {
-            0% {
-                background: #ffffff;
-                padding: 5px 10px;
-            }
-            50% {
-                background: #9d0025;
-                padding: 20px 30px;
-            }
-            100% {
-                background: #ffffff; 
-                 padding: 5px 10px;
-            }
-        }
+    <body>
+        <div>
+        <style>
+    
         *{
             margin:0;
             padding:0;
@@ -131,6 +108,42 @@
         /*    text-align: center;*/
             font-size: 0.9em; /* 1em é o tamanho normal da fonte */
         /*}*/
+        
+        
+        .container {
+            background: #fff;
+            width:.5%;
+            margin-left: auto;
+            margin-right:auto;
+            padding:1rem;
+            border-radius: 3px;
+        }
+        .btn {
+            background: #ffffff;
+            border: none;
+            color: #ffffff;
+            padding:10px 30px;
+            border-radius: 10px;
+        }
+        .flash {
+            animation-name: flash;
+            animation-duration: 1s;
+            animation-iteration-count: 2s;
+        }
+        @keyframes flash {
+            0% {
+                background: #ffffff;
+                padding: 5px 10px;
+            }
+            50% {
+                background: #9d0025;
+                padding: 20px 30px;
+            }
+            100% {
+                background: #ffffff; 
+                 padding: 5px 10px;
+            }
+        }
         </style>
         </div>
     
@@ -144,9 +157,51 @@
         </div>    
     
     
-        <div class="container">
+        
+   
+        <header>
+            <ul>
+                <li>
+                    <a href="a" class="btn-1"> Botão 01 </a>
+                    <a href="a" class="btn-2"> Botão 02 </a>
+                </li>
+            </ul>        
+        </header>
+       
+
+    <canvas style="background:#000000;" id="canvas" width="700" height="700"></canvas>  
+    
+    <!--<div class="rodape">-->
+    <!--        <p>&copy; 2019 crato-thaissa.github.io </p>-->
+    <!--        <p>&copy; 2019 hacknsa.github.io </p>-->
+    <!--</div>-->
+        
+    <div class="container">
             <button type="button" class="flash btn"> Bora Bora </button>
         </div>
+   
+    
+        /*.rodape {*/
+        /*    outline: 1px solid rgb(0, 0, 0)50, 246, 246);*/
+        /*    outline-offset: 5px;*/
+        /*    width: 100%;*/
+        /*    text-align: center;*/
+            font-size: 0.9em; /* 1em é o tamanho normal da fonte */
+        /*}*/
+        </style>
+        </div>
+    
+
+    
+    
+        <div class="grid">
+            <div class="col-5">
+                <h1><p align="center"> Encontre os botões </p></h1>
+            </div>
+        </div>    
+    
+    
+        
    
    
         <header>
@@ -159,13 +214,15 @@
         </header>
        
 
-    <canvas style="background:#000000;" id="canvas" width="900" height="800"></canvas>  
+    <canvas style="background:#000000;" id="canvas" width="600" height="600"></canvas>  
     
     <!--<div class="rodape">-->
     <!--        <p>&copy; 2019 crato-thaissa.github.io </p>-->
     <!--        <p>&copy; 2019 hacknsa.github.io </p>-->
     <!--</div>-->
-        
+    <div class="container">
+        <button type="button" class="flash btn"> Bora Bora </button>
+    </div>
   
 
     </body>
