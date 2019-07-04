@@ -47,7 +47,7 @@ function Run() {
     if (document.getElementById("cmd").value === "$cmd -define byeNasa" && step == 1) {
         
     document.getElementById("steps").innerHTML = "Ótimo. Agora adicione a biblioteca NOKIA.nasa. Lembre-se, sua função é chamada \"byeNasa\".";
-    
+
     document.getElementById("cmd").value = "$cmd";
     
     document.getElementById("output").innerHTML = "Função byeNasa definida com sucesso.";
@@ -55,6 +55,7 @@ function Run() {
     step++;
     
     }
+}
     
 //2
     if (document.getElementById("cmd").value === "$cmd -add byeNasa NOKIA.nasa" && step == 2) {
