@@ -98,30 +98,53 @@ function Q4() {
 
 function Q5() {
     console.log('Q5');
-    var altura = Number.parseFloat(document.getElementById('altura').value);
-    var peso = Number.parseFloat(document.getElementById('peso').value);
-    var aux = document.getElementById('generos');
-    var genero = aux.options[aux.selectedIndex].text;
+    var altura = Number.parseFloat (document.getElementById('altura').value);
+    var peso = Number.parseFloat (document.getElementById('peso').value);
+    var aux = document.getElementById ('generos');
+    var genero = aux.options[aux.selectedIndex].value;
     // Segue aqui seu código 
     // (imc = peso / (altura+altura))
-    var wy = (peso/Math.pow(altura,2))
-    console.log('Valor do seu IMC = ' + (peso/Math.pow(altura,2)))
-    if (wy < 18.5) {
-        console.log(genero + ' ' + 'Magro(a)')
+    var imc = peso/Math.pow (altura,2)
+
+
+
+    if ((!altura) || (!peso)) {
+    console.log('Informe os dois valores:')
+    }
+    console.log('O peso é: ' + peso + 'kg');
+    console.log('A altura é: ' + altura + 'm');
+    console.log('O IMC é: ' + imc);
+
+
+    switch (genero) {
+    case 'Masculino':
+        if (imc < 18.5) {
+            console.log('Você está Magro, consulte um médico e cuide da tua alimentação')
         }
-    else if (wy > 18.5) {
-        console.log(genero + ' ' + 'Sarado(a)')
-    }
-    else if (wy < 24.9) {
-        console.log(genero + ' ' + 'sarado(a)')
-    }
-    else if (wy > 25) {
-        console.log(genero + ' ' + 'Rechonchudo(a)')
-    }
-    else if (wy > 30) {
-        console.log(genero + ' ' + 'rechonchudo(a)')
-    }
-    else if (wy < 30) {
-        console.log(genero + ' ' + 'Obeso(a),' + ' ' + 'consulte um médico e cuide da tua alimentação')
-    }
-}
+        else if (imc < 25.0) {
+            console.log('Você está Sarado')
+        }
+        else if (imc < 30.0) {
+            console.log('Você está Rechonchudinho')
+        }
+            else if (imc >= 30.0) {
+                console.log('Você está acima do peso, consulte um médico e cuide da tua alimentação')
+        }
+        break;
+
+
+    case 'feminino':
+        if (imc < 18.5) {
+            console.log('Você está magra, cuidado mana, consulte um médico e cuide da tua alimentação')
+        }
+        else if (imc < 25.0) {
+            console.log('Você está ótima para seu peso')
+        }    
+        else if (imc < 30.0) {
+            console.log('Você está Rechonchudinha')
+        }
+        else if (imc >= 30.0) {
+            console.log('Você está acima do peso, cuidado mana, consulte um médico e cuide da tua alimentação')
+        }
+        break;
+        }
