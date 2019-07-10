@@ -88,6 +88,7 @@ function Q4() {
         console.log('O valor da Hipotenusa é: ' + Math.sqrt(Math.pow (a_str,2) + Math.pow (b_str,2)))
         }
     }}}}}}}
+    
  
 
 
@@ -109,9 +110,9 @@ function Q5() {
     if ((!altura) || (!peso)) {
     console.log('Informe os dois valores:')
     }
-    console.log('O peso é: ' + peso + 'kg');
-    console.log('A altura é: ' + altura + 'm');
-    console.log('O IMC é: ' + imc);
+    console.log('O seu peso é: ' + peso);
+    console.log('A sua altura é: ' + altura);
+    console.log('O seu IMC é: ' + imc);
 
 
     switch (generos) {
@@ -156,7 +157,6 @@ function Q5() {
                 }
             }
         }
-    }
         break;
     }
 }
