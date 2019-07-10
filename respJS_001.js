@@ -87,7 +87,7 @@ function Q4() {
         console.log('Lado Faltando: Hipotenusa')
         console.log('O valor da Hipotenusa é: ' + Math.sqrt(Math.pow (a_str,2) + Math.pow (b_str,2)))
     }  
-                                }
+}
                             }
                         }
                     }
