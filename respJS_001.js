@@ -102,8 +102,8 @@ function Q5() {
     console.log('O IMC é: ' + imc);
 
 
-    switch (genero) {
-    case 'Masculino':
+    switch (generos) {
+    case "Masculino":
         if (imc < 18.5) {
             console.log('Você está Magro, consulte um médico e cuide da tua alimentação')
         }
@@ -119,7 +119,7 @@ function Q5() {
         break;
 
 
-    case 'feminino':
+    case "feminino":
         if (imc < 18.5) {
             console.log('Você está magra, cuidado mana, consulte um médico e cuide da tua alimentação')
         }
