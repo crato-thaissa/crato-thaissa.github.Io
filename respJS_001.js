@@ -119,14 +119,20 @@ function Q5() {
         if (imc < 18.5) {
             console.log('Você está Magro, consulte um médico e cuide da tua alimentação')
         }
-        else if (imc < 25.0) {
-            console.log('Você está Sarado')
-        }
-        else if (imc < 30.0) {
-            console.log('Você está Rechonchudinho')
-        }
-            else if (imc >= 30.0) {
-                console.log('Você está acima do peso, consulte um médico e cuide da tua alimentação')
+        else {
+            if (imc < 25.0) {
+                console.log('Você está Sarado')
+            }
+            else {
+                if (imc < 30.0) {
+                    console.log('Você está Rechonchudinho')
+                }
+                else {
+                    if (imc >= 30.0) {
+                        console.log('Você está acima do peso, consulte um médico e cuide da tua alimentação')
+                    }
+                }
+            }
         }
         break;
 
