@@ -50,50 +50,36 @@ function Q4() {
         console.log('Retire um valor!!') 
     } 
 
-    else {
-    if ((!a_str) && (!b_str) && (!c_str)) {
+    else if ((!a_str) && (!b_str) && (!c_str)) {
         console.log('Informe ao menos dois valores!!') 
     }
 
-    else {
-    if ((!a_str) && (!b_str)) {
+    else if ((!a_str) && (!b_str)) {
         console.log('Informe mais um valor!!')
     } 
     
-    else {
-    if ((!a_str) && (!c_str)) {
+    else if ((!a_str) && (!c_str)) {
         console.log('Informe mais um valor!!')
     } 
 
-    else {
-    if ((!b_str) && (!c_str)) {
+    else if ((!b_str) && (!c_str)) {
         console.log('Informe mais um valor!!')
     } 
 
-    else {
-    if (!a_str) {
+    else if (!a_str) {
         console.log('Lado Faltando: Cateto 1')
         console.log('O valor do Cateto 1 é: ' + Math.sqrt(Math.pow (c_str,2) - Math.pow (b_str,2)))
     } 
     
-    else {    
-    if (!b_str) {
+    else if (!b_str) {
         console.log('Lado Faltando: Cateto 2')
         console.log('O valor do Cateto 2 é: ' + Math.sqrt(Math.pow (c_str,2) - Math.pow (a_str,2)))
     } 
     
-    else {
-    if (!c_str) {
+    else if (!c_str) {
         console.log('Lado Faltando: Hipotenusa')
         console.log('O valor da Hipotenusa é: ' + Math.sqrt(Math.pow (a_str,2) + Math.pow (b_str,2)))
     }  
-}
-                            }
-                        }
-                    }
-                }
-            }
-    }
 }
 
 function Q5() {
